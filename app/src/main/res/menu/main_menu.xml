@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_main"
+        android:title="home"
+        app:showAsAction="ifRoom"/>
+
+
+    <item
+        android:id="@+id/action_cabinet"
+        android:title="Cabinet Arcade"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_consola"
+        android:title="Consola Arcade"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_perfil"
+        android:title="Acceder a cuenta"
+        app:showAsAction="never"/>
+</menu>
