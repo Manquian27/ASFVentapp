@@ -3,7 +3,6 @@ package com.example.asfventapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -26,20 +25,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         recycler = (RecyclerView) findViewById(R.id.RecyclerId);
-        recycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
-        //recycler.setLayoutManager(new GridLayoutManager(this,1));
+        //recycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        recycler.setLayoutManager(new GridLayoutManager(this,1));
         listDatos=new ArrayList<String>();
 
         for (int i=1;i<=10;i++){
-            listDatos.add("\nNoticia # "+i+"\n \nLorem ipsum dolor sit amet, consectetur adipiscing elit. " +
+            listDatos.add("Noticia # "+i+"\n \nLorem ipsum dolor sit amet, consectetur adipiscing elit. " +
                     "Fusce a mi purus. Nullam id faucibus purus. Sed facilisis arcu enim, at ornare dolor" +
                     " ultricies quis. Sed dolor nibh, elementum eu lacus in, mattis consectetur neque. Donec" +
-                    " sed lectus nisi.\n \n Maecenas bibendum risus finibus rhoncus scelerisque.Fusce tincidunt " +
-                    "turpis imperdiet urna commodo, ac elementum ligula convallis. Suspendisse potenti. " +
-                    "Nullam laoreet sodales vestibulum. Fusce porta gravida mattis. Maecenas venenatis " +
-                    "in diam quis congue. Morbi aliquet, nunc sed tincidunt luctus, diam erat blandit " +
-                    "purus, a fringilla ipsum metus vel massa. Quisque quis purus nunc. Suspendisse " +
-                    "sollicitudin sagittis ex, vel placerat turpis.\n \n \n");
+                    " sed lectus nisi. Maecenas bibendum risus finibus rhoncus scelerisque.\n \n \n");
         }
 
         CourseAdapter adapter1=new CourseAdapter(listDatos);
