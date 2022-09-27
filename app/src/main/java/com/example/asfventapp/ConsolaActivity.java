@@ -7,14 +7,25 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class ConsolaActivity extends AppCompatActivity {
+
+    Spinner mem_consola;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consola);
+        mem_consola = findViewById(R.id.idSpinner);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.memoria_consola, android.R.layout.simple_spinner_item);
+
+        mem_consola.setAdapter(adapter);
+
     }
 
     @Override

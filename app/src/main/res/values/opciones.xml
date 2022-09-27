@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="memoria_consola">
+
+        <item>Seleccione una opcion</item>
+        <item>32GB</item>
+        <item>64GB</item>
+
+    </string-array>
+
+    <string-array name="memoria_cabinet">
+
+        <item>Seleccione una opcion</item>
+        <item>120GB</item>
+        <item>250GB</item>
+        <item>500GB</item>
+        <item>1TB</item>
+
+    </string-array>
+
+
+</resources>

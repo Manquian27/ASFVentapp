@@ -7,14 +7,25 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class CabinetActivity extends AppCompatActivity {
+
+    Spinner mem_arcade;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cabinet);
+        mem_arcade = findViewById(R.id.idSpinner2);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.memoria_cabinet, android.R.layout.simple_spinner_item);
+
+        mem_arcade.setAdapter(adapter);
+
     }
 
     @Override
@@ -37,8 +48,8 @@ public class CabinetActivity extends AppCompatActivity {
                 break;
             case R.id.action_consola:
                 Toast.makeText(this,"Consola Arcade", Toast.LENGTH_SHORT).show();
-                Intent intent3 = new Intent(CabinetActivity.this, ConsolaActivity.class);
-                startActivity(intent3);
+                Intent intent2 = new Intent(CabinetActivity.this, ConsolaActivity.class);
+                startActivity(intent2);
                 finish();
                 break;
             case R.id.action_perfil:
