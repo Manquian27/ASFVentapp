@@ -2,6 +2,8 @@ package com.example.asfventapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,12 +11,34 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
+
+
+    ArrayList<String> listDatos;
+    RecyclerView recycler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        recycler = (RecyclerView) findViewById(R.id.RecyclerId);
+        //recycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        recycler.setLayoutManager(new GridLayoutManager(this,1));
+        listDatos=new ArrayList<String>();
+
+        for (int i=1;i<=10;i++){
+            listDatos.add("Noticia # "+i+"\n \nLorem ipsum dolor sit amet, consectetur adipiscing elit. " +
+                    "Fusce a mi purus. Nullam id faucibus purus. Sed facilisis arcu enim, at ornare dolor" +
+                    " ultricies quis. Sed dolor nibh, elementum eu lacus in, mattis consectetur neque. Donec" +
+                    " sed lectus nisi. Maecenas bibendum risus finibus rhoncus scelerisque.\n \n \n");
+        }
+
+        CourseAdapter adapter1=new CourseAdapter(listDatos);
+
+        recycler.setAdapter(adapter1);
     }
 
     @Override
@@ -48,6 +72,9 @@ public class MainActivity extends AppCompatActivity {
                 finish();
                 break;
         }
+
         return super.onOptionsItemSelected(item);
+
     }
+
 }
