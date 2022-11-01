@@ -22,4 +22,9 @@
         android:id="@+id/action_perfil"
         android:title="Acceder a cuenta"
         app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_contactanos"
+        android:title="Contactanos"
+        app:showAsAction="never"/>
 </menu>
