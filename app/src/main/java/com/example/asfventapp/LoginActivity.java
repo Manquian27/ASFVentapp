@@ -47,6 +47,12 @@ public class LoginActivity extends AppCompatActivity {
             case R.id.action_perfil:
                 Toast.makeText(this,"Ingresar a tu cuenta", Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.action_contactanos:
+                Toast.makeText(this,"Contactanos", Toast.LENGTH_SHORT).show();
+                Intent intent5 = new Intent(LoginActivity.this, MainContactanos.class);
+                startActivity(intent5);
+                finish();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

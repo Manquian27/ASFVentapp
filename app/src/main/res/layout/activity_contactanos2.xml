@@ -8,10 +8,10 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/tvSaludo"
+        android:id="@+id/Saludo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="saludo"
+        android:text="Hola"
         android:textAppearance="?android:attr/textAppearanceLarge"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,5 +19,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.074" />
+
+    <EditText
+        android:id="@+id/edTxtMensaje"
+        android:layout_width="344dp"
+        android:layout_height="313dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Saludo"
+        app:layout_constraintVertical_bias="0.169" />
+
+    <Button
+        android:id="@+id/btnEnviarMensaje"
+        android:layout_width="258dp"
+        android:layout_height="72dp"
+        android:text="Enviar Mensaje"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edTxtMensaje" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

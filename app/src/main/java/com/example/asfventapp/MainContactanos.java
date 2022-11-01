@@ -1,10 +1,13 @@
 package com.example.asfventapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +19,48 @@ public class MainContactanos extends AppCompatActivity {
     private EditText edTxtCorreo;
     private EditText editTxtApellido;
     private Button btnEnviar;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_main:
+                Toast.makeText(this,"Home", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainContactanos.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+                break;
+            case R.id.action_cabinet:
+                Toast.makeText(this,"Arcade Cabinet", Toast.LENGTH_SHORT).show();
+                Intent intent2 = new Intent(MainContactanos.this, CabinetActivity.class);
+                startActivity(intent2);
+                finish();
+                break;
+            case R.id.action_consola:
+                Toast.makeText(this,"Consola Arcade", Toast.LENGTH_SHORT).show();
+                Intent intent3 = new Intent(MainContactanos.this, ConsolaActivity.class);
+                startActivity(intent3);
+                finish();
+                break;
+            case R.id.action_perfil:
+                Toast.makeText(this,"Ingresar a tu cuenta", Toast.LENGTH_SHORT).show();
+                Intent intent4 = new Intent(MainContactanos.this, LoginActivity.class);
+                startActivity(intent4);
+                finish();
+                break;
+            case R.id.action_contactanos:
+                Toast.makeText(this,"Contactanos", Toast.LENGTH_SHORT).show();
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

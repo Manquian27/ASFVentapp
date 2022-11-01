@@ -8,19 +8,26 @@ import android.widget.TextView;
 
 public class contactanos2 extends AppCompatActivity {
     private Bundle bundle;
-    private TextView tvSaludo;
+    private TextView Saludo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contactanos2);
 
-        tvSaludo = (TextView) findViewById(R.id.tvSaludo);
+        Saludo = (TextView) findViewById(R.id.Saludo);
 
         bundle = getIntent().getExtras();
 
-        String saludo = bundle.getString("nombre");
+        String Nombre = bundle.getString("nombre");
+        String Apellido = bundle.getString("apellido");
+        String Fono = bundle.getString("fono");
+        String Correo = bundle.getString("correo");
 
-        tvSaludo.append(" " + saludo + " :D");
+        Saludo.append(" " + Nombre + " " + Apellido +
+                "." + "\n\nEn el siguiente recuadro ingresa tu consulta la cual " +
+                "será atendida a la brevedad. \n\nRecuerda indicar si prefieres" +
+                " ser contactado vía teléfono al numero " + Fono +
+                " o al Correo " + Correo);
     }
 }

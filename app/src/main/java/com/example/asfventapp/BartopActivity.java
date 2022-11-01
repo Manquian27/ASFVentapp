@@ -51,6 +51,12 @@ public class BartopActivity extends AppCompatActivity {
                 startActivity(intent4);
                 finish();
                 break;
+            case R.id.action_contactanos:
+                Toast.makeText(this,"Contactanos", Toast.LENGTH_SHORT).show();
+                Intent intent5 = new Intent(BartopActivity.this, MainContactanos.class);
+                startActivity(intent5);
+                finish();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
