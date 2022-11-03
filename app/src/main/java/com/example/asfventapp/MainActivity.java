@@ -77,6 +77,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent5);
                 finish();
                 break;
+            case R.id.action_visitanos:
+                Toast.makeText(this,"Visitanos", Toast.LENGTH_SHORT).show();
+                Intent intent6 = new Intent(MainActivity.this, MapActivity.class);
+                startActivity(intent6);
+                finish();
+                break;
         }
 
         return super.onOptionsItemSelected(item);

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ASF Ventapp</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoibWFucXVpYW4yNyIsImEiOiJjbGExODliaXQwMGRuM3ZsbTE4cmlwY2txIn0.ZnaZByFe-2CFNvfYyuQ0vQ</string>
 </resources>

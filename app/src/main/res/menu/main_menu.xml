@@ -27,4 +27,9 @@
         android:id="@+id/action_contactanos"
         android:title="Contactanos"
         app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_visitanos"
+        android:title="Visitanos"
+        app:showAsAction="never"/>
 </menu>

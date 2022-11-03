@@ -56,6 +56,12 @@ public class MainContactanos extends AppCompatActivity {
             case R.id.action_contactanos:
                 Toast.makeText(this,"Contactanos", Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.action_visitanos:
+                Toast.makeText(this,"Visitanos", Toast.LENGTH_SHORT).show();
+                Intent intent6 = new Intent(MainContactanos.this, MapActivity.class);
+                startActivity(intent6);
+                finish();
+                break;
         }
 
         return super.onOptionsItemSelected(item);
