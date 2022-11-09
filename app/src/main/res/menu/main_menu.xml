@@ -32,4 +32,9 @@
         android:id="@+id/action_visitanos"
         android:title="Visitanos"
         app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_st"
+        android:title="Solicitud Juego"
+        app:showAsAction="never"/>
 </menu>
