@@ -1,4 +1,4 @@
-package com.example.asfventapp;
+package com.asfventapp;
 
 import android.view.LayoutInflater;
 import android.view.View;

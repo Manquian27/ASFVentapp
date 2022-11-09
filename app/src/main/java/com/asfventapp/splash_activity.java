@@ -1,6 +1,5 @@
-package com.example.asfventapp;
+package com.asfventapp;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -28,7 +27,7 @@ public class splash_activity extends Activity {
                 Intent intent = new Intent(splash_activity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
-            };
+            }
 
         }, DURACION_SPLASH);
 

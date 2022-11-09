@@ -1,4 +1,4 @@
-package com.example.asfventapp;
+package com.asfventapp;
 
 import org.junit.Test;
 

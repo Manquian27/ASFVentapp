@@ -1,10 +1,11 @@
-package com.example.asfventapp;
+package com.asfventapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         recycler = (RecyclerView) findViewById(R.id.RecyclerId);
         //recycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         recycler.setLayoutManager(new GridLayoutManager(this,1));
-        listDatos=new ArrayList<String>();
+        listDatos= new ArrayList<>();
 
         for (int i=1;i<=10;i++){
             listDatos.add("Noticia # "+i+"\n \nLorem ipsum dolor sit amet, consectetur adipiscing elit. " +
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
