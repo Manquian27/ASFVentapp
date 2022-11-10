@@ -124,6 +124,12 @@ public class MapActivity extends AppCompatActivity {
             case R.id.action_visitanos:
                 Toast.makeText(this,"Visitanos", Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.action_st:
+                Toast.makeText(this,"Pedido juegos seleccionado", Toast.LENGTH_SHORT).show();
+                Intent intent7 = new Intent(MapActivity.this, MainPedido.class);
+                startActivity(intent7);
+                finish();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

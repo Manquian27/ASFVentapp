@@ -56,33 +56,39 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this,"Home", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.action_cabinet:
-                Toast.makeText(this,"Arcade Cabinet", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Arcade Cabinet seleccionado", Toast.LENGTH_SHORT).show();
                 Intent intent2 = new Intent(MainActivity.this, CabinetActivity.class);
                 startActivity(intent2);
                 finish();
                 break;
             case R.id.action_consola:
-                Toast.makeText(this,"Consola Arcade", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Consola Arcade seleccionado", Toast.LENGTH_SHORT).show();
                 Intent intent3 = new Intent(MainActivity.this, ConsolaActivity.class);
                 startActivity(intent3);
                 finish();
                 break;
             case R.id.action_perfil:
-                Toast.makeText(this,"Ingresar a tu cuenta", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Ingresar a tu cuenta seleccionado", Toast.LENGTH_SHORT).show();
                 Intent intent4 = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent4);
                 finish();
                 break;
             case R.id.action_contactanos:
-                Toast.makeText(this,"Contactanos", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Contactanos seleccionado", Toast.LENGTH_SHORT).show();
                 Intent intent5 = new Intent(MainActivity.this, MainContactanos.class);
                 startActivity(intent5);
                 finish();
                 break;
             case R.id.action_visitanos:
-                Toast.makeText(this,"Visitanos", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Visitanos seleccionado", Toast.LENGTH_SHORT).show();
                 Intent intent6 = new Intent(MainActivity.this, MapActivity.class);
                 startActivity(intent6);
+                finish();
+                break;
+            case R.id.action_st:
+                Toast.makeText(this,"Pedido juegos seleccionado", Toast.LENGTH_SHORT).show();
+                Intent intent7 = new Intent(MainActivity.this, MainPedido.class);
+                startActivity(intent7);
                 finish();
                 break;
         }

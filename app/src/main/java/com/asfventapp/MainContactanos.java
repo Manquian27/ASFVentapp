@@ -64,6 +64,12 @@ public class MainContactanos extends AppCompatActivity {
                 startActivity(intent6);
                 finish();
                 break;
+            case R.id.action_st:
+                Toast.makeText(this,"Pedido juegos seleccionado", Toast.LENGTH_SHORT).show();
+                Intent intent7 = new Intent(MainContactanos.this, MainPedido.class);
+                startActivity(intent7);
+                finish();
+                break;
         }
 
         return super.onOptionsItemSelected(item);

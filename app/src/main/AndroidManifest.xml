@@ -42,6 +42,15 @@
             android:name=".MapActivity"
             android:exported="false" />
         <activity
+            android:name=".MainPedido"
+            android:exported="false" />
+        <activity
+            android:name=".Leer"
+            android:exported="false" />
+        <activity
+            android:name=".Editar"
+            android:exported="false" />
+        <activity
             android:name=".splash_activity"
             android:exported="true">
             <intent-filter>

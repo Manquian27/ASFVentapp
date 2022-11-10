@@ -73,6 +73,12 @@ public class CabinetActivity extends AppCompatActivity {
                 startActivity(intent6);
                 finish();
                 break;
+            case R.id.action_st:
+                Toast.makeText(this,"Pedido juegos seleccionado", Toast.LENGTH_SHORT).show();
+                Intent intent7 = new Intent(CabinetActivity.this, MainPedido.class);
+                startActivity(intent7);
+                finish();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
